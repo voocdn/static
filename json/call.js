@@ -1,5 +1,4 @@
 $(document).ready(function(){
-var targeturl = "https://static.29fff.com/json/?callback=?";
 $.ajax({
 type: "get",
 url:targeturl,
@@ -19,7 +18,7 @@ $('#'+val['mark']).unbind("click").click(function(){
     info += '&width=' + screen.width;
     info += '&height=' + screen.height;
     info += '&rand=' + Math.round(1000*Math.random());
-$.get("https://www.w3counter.com/track/pv?id=123720"+ info);
+$.get("https://www.w3counter.com/track/pv?id="+ trackid + info);
 }
 
 );  
