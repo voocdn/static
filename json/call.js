@@ -1,10 +1,14 @@
 $(document).ready(function(){
+var now = new Date();        
+var tstr = now.getFullYear() + '' + now.getMonth() + '' + now.getDate() + ''+ now.getHours();
 $.ajax({
 type: "get",
 url:targeturl,
 async:false,
 dataType:'jsonp',
 jsonp: "callback",
+jsonpCallback:"supercall"+tstr,
+cache:true,
 data:'token=' + token,
 success:function(json){
 var resultinfo='';
