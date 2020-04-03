@@ -117,7 +117,7 @@ function ckplayerConfig() {
 		}
 	};
 }
-! (function() {
+!(function() {
 	var javascriptPath = '';
 	!function() {
 		var scriptList = document.scripts,
@@ -357,6 +357,8 @@ function ckplayerConfig() {
 		this.fontFamily = '"Microsoft YaHei"; YaHei; "\5FAE\8F6F\96C5\9ED1"; SimHei; "\9ED1\4F53";Arial';
 		//全局变量：设置字幕的文字大小
 		this.trackFontSize=16;
+		//全局变量：设置字幕的行距
+		this.trackLineHeight=30;
 		//全局变量：记录第一次拖动进度按钮时的位置
 		this.timeSliderLeftTemp = 0;
 		//全局变量：判断是否记录了总时间
@@ -3497,15 +3499,18 @@ function ckplayerConfig() {
 			接口函数：修改字幕大小
 			提供给外部api
 		*/
-		changeSubtitlesSize:function(n){
+		changeSubtitlesSize:function(n,m){
 			if (!this.loaded || n < 0) {
 				return;
 			}
 			if (this.playerType == 'flashplayer') {
-				this.V.changeSubtitlesSize(n);
+				this.V.changeSubtitlesSize(n,m);
 				return;
 			}
 			this.trackFontSize=n;
+			if(!this.isUndefined(m)){
+				this.trackLineHeight=m;
+			}
 			this.trackShowAgain();
 		},
 		/*
@@ -5412,9 +5417,9 @@ function ckplayerConfig() {
 						color: '#FFFFFF',
 						size: this.trackFontSize,
 						font: this.fontFamily,
-						lineHeight: 30
+						lineHeight: this.trackLineHeight+'px'
 					}],
-					position: [1, 2, null, -(arr.length - i) * 30 - 50]
+					position: [1, 2, null, -(arr.length - i) * this.trackLineHeight - 50]
 				};
 				var ele = this.addElement(obj);
 				this.trackElement.push(ele);
@@ -8584,6 +8589,9 @@ function ckplayerConfig() {
 			搜索数组
 		 */
 		arrIndexOf: function(arr, key) {
+			if(!arr || !key){
+				return false;
+			}
 			var re = new RegExp(key, ['']);
 			return (arr.toString().replace(re, '┢').replace(/[^,┢]/g, '')).indexOf('┢');
 		},
