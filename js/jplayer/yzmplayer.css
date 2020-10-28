@@ -143,7 +143,7 @@ button[data-balloon]{overflow:visible}
 .yzmplayer *{-webkit-box-sizing:content-box;box-sizing:content-box}
 .yzmplayer svg{width:100%;height:100%}
 .yzmplayer svg circle,.yzmplayer svg path{fill:#fff}
-.yzmplayer:-webkit-full-screen{width:100%;height:100%;background:#000;position:fixed;z-index:100000;left:0;top:0}
+.yzmplayer:-webkit-full-screen{width:100%;height:100%;background:#000;position:fixed;z-index:1000;left:0;top:0}
 .yzmplayer:-webkit-full-screen .yzmplayer-danmaku .yzmplayer-danmaku-bottom.yzmplayer-danmaku-move,.yzmplayer:-webkit-full-screen .yzmplayer-danmaku .yzmplayer-danmaku-top.yzmplayer-danmaku-move{-webkit-animation:danmaku-center 6s linear;animation:danmaku-center 6s linear;-webkit-animation-play-state:inherit;animation-play-state:inherit}
 .yzmplayer:-webkit-full-screen .yzmplayer-danmaku .yzmplayer-danmaku-right.yzmplayer-danmaku-move{-webkit-animation:danmaku 8s linear;animation:danmaku 8s linear;-webkit-animation-play-state:inherit;animation-play-state:inherit}
 .yzmplayer.yzmplayer-live .yzmplayer-bar-wrap,.yzmplayer.yzmplayer-live .yzmplayer-setting-loop,.yzmplayer.yzmplayer-live .yzmplayer-setting-speed,.yzmplayer.yzmplayer-live .yzmplayer-time,.yzmplayer.yzmplayer-no-danmaku .yzmplayer-controller .yzmplayer-icons .yzmplayer-comment,.yzmplayer.yzmplayer-no-danmaku .yzmplayer-controller .yzmplayer-icons .yzmplayer-setting .yzmplayer-setting-box .yzmplayer-setting-danmaku,.yzmplayer.yzmplayer-no-danmaku .yzmplayer-controller .yzmplayer-icons .yzmplayer-setting .yzmplayer-setting-box .yzmplayer-setting-danunlimit,.yzmplayer.yzmplayer-no-danmaku .yzmplayer-controller .yzmplayer-icons .yzmplayer-setting .yzmplayer-setting-box .yzmplayer-setting-showdan,.yzmplayer.yzmplayer-no-danmaku .yzmplayer-danmaku{display:none}
@@ -156,7 +156,7 @@ button[data-balloon]{overflow:visible}
 .yzmplayer.yzmplayer-hide-controller{cursor:none}
 .yzmplayer.yzmplayer-hide-controller .yzmplayer-controller,.yzmplayer.yzmplayer-hide-controller .yzmplayer-controller-mask{opacity: 0;-webkit-transform:translateY(100%);transform:translateY(100%);/* display: none; */}
 .yzmplayer.yzmplayer-show-controller .yzmplayer-controller,.yzmplayer.yzmplayer-show-controller .yzmplayer-controller-mask{opacity:1;}
-.yzmplayer.yzmplayer-fulled{position:fixed;z-index:100000;left:0;top:0;width:100%;height:100%}f
+.yzmplayer.yzmplayer-fulled{position:fixed;z-index:1000;left:0;top:0;width:100%;height:100%}f
 .yzmplayer.yzmplayer-mobile .yzmplayer-controller .yzmplayer-icons .yzmplayer-camera-icon,.yzmplayer.yzmplayer-mobile .yzmplayer-controller .yzmplayer-icons .yzmplayer-volume{display:none}
 .yzmplayer-controller .yzmplayer-icons .yzmplayer-full .yzmplayer-full-in-icon{position:static;display:inline-block}
 .yzmplayer.yzmplayer-mobile .yzmplayer-bar-time{display:none}
@@ -356,7 +356,7 @@ ul::-webkit-scrollbar-track{-webkit-box-shadow: inset 0 0 5px #ddd;border-radius
 100%{opacity:1;transform:translate(0,0);}}
 .yzmplayer-danmu{animation: fastrx60 0.5s;-webkit-animation: fastrx60 0.5s;-moz-animation: fastrx60 0.5s;}
 .memory-play-wrap .memory-play{padding: 12px 12px!important;border-radius: 4px;color: #fff;font-size: 14px;user-select: none;background-color: hsla(0, 0%, 13%, 0.4);text-align: center;}
-.memory-play-wrap{position: absolute;left: 40px!important;bottom: 65px!important;z-index: 1000000000;width: auto;}
+.memory-play-wrap{position: absolute;left: 40px!important;bottom: 65px!important;z-index: 1010;width: auto;}
 .memory-play-wrap .memory-play .play-jump{color: #00c1de;padding: 5px;border-radius: 3px;cursor: pointer;}
 .close{padding: 0px 5px;font-size: 24px;vertical-align: -2.5px;color: #00c1de;}
 .yzmplayer-info-panel{animation: fastr-20 5.5s;-webkit-animation: fastr-20 0.5s;-moz-animation: fastr-20 0.5s;}
@@ -380,11 +380,11 @@ ul::-webkit-scrollbar-track{-webkit-box-shadow: inset 0 0 5px #ddd;border-radius
 .yzmplayer-controller .yzmplayer-icons.yzmplayer-comment-box .yzmplayer-comment-setting-icon{display: none;}
 .yzmplayer-bezel .diplayer-loading-icon{display:none;position:absolute;bottom: 55px;right: 45px;margin:-18px 0 0 -18px;pointer-events:none;border: 0;border-color: unset;opacity: .8;border-radius: 0;width: 70px;height: 100px;-moz-animation: spinoffPulse .9s infinite linear;-webkit-animation: unset;background-image: url(../jplayer/tv.gif);background-size: 100%;background-image: url(../jplayer/loading2.gif);top: 50%;left: 50%;height: 32px;width: 32px;background-image: url(../jplayer/QqqCVK.png);-webkit-animation: vod_loading 1s steps(30) infinite;width: 54px;height: 20px;margin: -18px 0 0 -18px;background-size: 54px 600px;animation: vod_loading 1s steps(30) infinite;opacity: 1;background-image: url(../jplayer/loading.png);}
 .yzmplayer-bezel .diplayer-loading-icon .diplayer-loading-hide,.yzmplayer:-webkit-full-screen .yzmplayer-full-icon{display:none}.yzmplayer .yzmplayer-fulloff-icon{display: none!important;}.yzmplayer:-webkit-full-screen .yzmplayer-fulloff-icon{display:inline!important;}
-#close{bottom: 5%;left: 2%;box-shadow: unset;background: unset;top: unset;color: #666;height: auto;border-radius: 0;text-align: left;font-size: 12px;width: 110px;cursor: pointer;position: absolute;z-index: 99999;display: inline-block;line-height: 16px;}
+#close{bottom: 5%;left: 2%;box-shadow: unset;background: unset;top: unset;color: #666;height: auto;border-radius: 0;text-align: left;font-size: 12px;width: 110px;cursor: pointer;position: absolute;z-index: 9999;display: inline-block;line-height: 16px;}
 /* #loading-box{width: 100%;height: 100%;position: absolute;z-index: 10000000001;background: #fff;} */
-#loading-box{width: 100%;height: 100%;position: absolute;z-index: 10000000001;}
+#loading-box{width: 100%;height: 100%;position: absolute;z-index: 1010;}
 #loading-box 1span{width: 18px;height: 18px;border-radius: 50%;background: gray;color: #fff;position: absolute;top: 5px;right: 5px;text-align: center;}
-#loading-boxad #close{display: inline-block;width: 100px;height: 35px;line-height: 35px;text-align: center;font-size: 14px;border-radius: 22px;margin: 0px 10px;color: #2082B3;overflow: hidden;box-shadow: 0px 2px 3px rgba(0,0,0,.3);background: #fff;position: absolute;z-index: 99999;top: 3%;right: 2%;cursor: pointer;}
+#loading-boxad #close{display: inline-block;width: 100px;height: 35px;line-height: 35px;text-align: center;font-size: 14px;border-radius: 22px;margin: 0px 10px;color: #2082B3;overflow: hidden;box-shadow: 0px 2px 3px rgba(0,0,0,.3);background: #fff;position: absolute;z-index: 9999;top: 3%;right: 2%;cursor: pointer;}
 #gg{background: url(../jplayer/bg.jpg) no-repeat center;background-size: contain;width: 100%;height: 100%;}
 .tj,#close span{display:none;float: left;width: 400px;font-weight: bold;}
 .wait{position: absolute; right: 0;}
